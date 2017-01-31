@@ -20,7 +20,7 @@ def ReadMnemonicCSV():
     
     for x in range(0,len (MnemonicData)):
 
-        StockDataURL = "https://www.google.com/finance/getprices?q=" + str(MnemonicData['Mnemonic'][x]) + "&x=ETR&i=60&p=10d&f=d,c,h,l,o,v"
+        StockDataURL = "https://www.google.com/finance/getprices?q=" + str(MnemonicData['Mnemonic'][x]) + "&x=ETR&i=60&p=10d&f=d,o"
         
         StockDataURL_Data = requests.get(StockDataURL,headers=headers).text
         
